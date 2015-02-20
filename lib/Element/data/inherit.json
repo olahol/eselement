@@ -1,0 +1,278 @@
+{
+    "ArrayExpression": [
+        "Node",
+        "Expression",
+        "ArrayExpression"
+    ],
+    "ArrowExpression": [
+        "Node",
+        "Function",
+        "Expression",
+        "ArrowExpression"
+    ],
+    "AssignmentExpression": [
+        "Node",
+        "Expression",
+        "AssignmentExpression"
+    ],
+    "BinaryExpression": [
+        "Node",
+        "Expression",
+        "BinaryExpression"
+    ],
+    "BlockStatement": [
+        "Node",
+        "Statement",
+        "BlockStatement"
+    ],
+    "BreakStatement": [
+        "Node",
+        "Statement",
+        "BreakStatement"
+    ],
+    "CallExpression": [
+        "Node",
+        "Expression",
+        "CallExpression"
+    ],
+    "CatchClause": [
+        "Node",
+        "CatchClause"
+    ],
+    "ComprehensionBlock": [
+        "Node",
+        "ComprehensionBlock"
+    ],
+    "ComprehensionExpression": [
+        "Node",
+        "Expression",
+        "ComprehensionExpression"
+    ],
+    "ConditionalExpression": [
+        "Node",
+        "Expression",
+        "ConditionalExpression"
+    ],
+    "ContinueStatement": [
+        "Node",
+        "Statement",
+        "ContinueStatement"
+    ],
+    "DebuggerStatement": [
+        "Node",
+        "Statement",
+        "DebuggerStatement"
+    ],
+    "Declaration": [
+        "Node",
+        "Statement",
+        "Declaration"
+    ],
+    "DoWhileStatement": [
+        "Node",
+        "Statement",
+        "DoWhileStatement"
+    ],
+    "EmptyStatement": [
+        "Node",
+        "Statement",
+        "EmptyStatement"
+    ],
+    "Expression": [
+        "Node",
+        "Expression"
+    ],
+    "ExpressionStatement": [
+        "Node",
+        "Statement",
+        "ExpressionStatement"
+    ],
+    "ForInStatement": [
+        "Node",
+        "Statement",
+        "ForInStatement"
+    ],
+    "ForOfStatement": [
+        "Node",
+        "Statement",
+        "ForOfStatement"
+    ],
+    "ForStatement": [
+        "Node",
+        "Statement",
+        "ForStatement"
+    ],
+    "Function": [
+        "Node",
+        "Function"
+    ],
+    "FunctionDeclaration": [
+        "Node",
+        "Function",
+        "Statement",
+        "Declaration",
+        "FunctionDeclaration"
+    ],
+    "FunctionExpression": [
+        "Node",
+        "Function",
+        "Expression",
+        "FunctionExpression"
+    ],
+    "GeneratorExpression": [
+        "Node",
+        "Expression",
+        "GeneratorExpression"
+    ],
+    "GraphExpression": [
+        "Node",
+        "Expression",
+        "GraphExpression"
+    ],
+    "GraphIndexExpression": [
+        "Node",
+        "Expression",
+        "GraphIndexExpression"
+    ],
+    "Identifier": [
+        "Node",
+        "Expression",
+        "Pattern",
+        "Identifier"
+    ],
+    "IfStatement": [
+        "Node",
+        "Statement",
+        "IfStatement"
+    ],
+    "LabeledStatement": [
+        "Node",
+        "Statement",
+        "LabeledStatement"
+    ],
+    "LetExpression": [
+        "Node",
+        "Expression",
+        "LetExpression"
+    ],
+    "LetStatement": [
+        "Node",
+        "Statement",
+        "LetStatement"
+    ],
+    "Literal": [
+        "Node",
+        "Expression",
+        "Literal"
+    ],
+    "LogicalExpression": [
+        "Node",
+        "Expression",
+        "LogicalExpression"
+    ],
+    "MemberExpression": [
+        "Node",
+        "Expression",
+        "MemberExpression"
+    ],
+    "NewExpression": [
+        "Node",
+        "Expression",
+        "NewExpression"
+    ],
+    "Node": [
+        "Node"
+    ],
+    "ObjectExpression": [
+        "Node",
+        "Expression",
+        "ObjectExpression"
+    ],
+    "Position": [
+        "Position"
+    ],
+    "Program": [
+        "Node",
+        "Program"
+    ],
+    "Property": [
+        "Node",
+        "Property"
+    ],
+    "ReturnStatement": [
+        "Node",
+        "Statement",
+        "ReturnStatement"
+    ],
+    "SequenceExpression": [
+        "Node",
+        "Expression",
+        "SequenceExpression"
+    ],
+    "SourceLocation": [
+        "SourceLocation"
+    ],
+    "Statement": [
+        "Node",
+        "Statement"
+    ],
+    "SwitchCase": [
+        "Node",
+        "SwitchCase"
+    ],
+    "SwitchStatement": [
+        "Node",
+        "Statement",
+        "SwitchStatement"
+    ],
+    "ThisExpression": [
+        "Node",
+        "Expression",
+        "ThisExpression"
+    ],
+    "ThrowStatement": [
+        "Node",
+        "Statement",
+        "ThrowStatement"
+    ],
+    "TryStatement": [
+        "Node",
+        "Statement",
+        "TryStatement"
+    ],
+    "UnaryExpression": [
+        "Node",
+        "Expression",
+        "UnaryExpression"
+    ],
+    "UpdateExpression": [
+        "Node",
+        "Expression",
+        "UpdateExpression"
+    ],
+    "VariableDeclaration": [
+        "Node",
+        "Statement",
+        "Declaration",
+        "VariableDeclaration"
+    ],
+    "VariableDeclarator": [
+        "Node",
+        "VariableDeclarator"
+    ],
+    "WhileStatement": [
+        "Node",
+        "Statement",
+        "WhileStatement"
+    ],
+    "WithStatement": [
+        "Node",
+        "Statement",
+        "WithStatement"
+    ],
+    "YieldExpression": [
+        "Node",
+        "Expression",
+        "YieldExpression"
+    ]
+}

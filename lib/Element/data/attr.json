@@ -1,0 +1,581 @@
+{
+    "ArrayExpression": {
+        "elements": [
+            [
+                "Expression",
+                "null"
+            ]
+        ]
+    },
+    "ArrowExpression": {
+        "body": [
+            "BlockStatement",
+            "Expression"
+        ],
+        "defaults": [
+            [
+                "Expression"
+            ]
+        ],
+        "expression": [
+            "boolean"
+        ],
+        "generator": [
+            "boolean"
+        ],
+        "params": [
+            [
+                "Pattern"
+            ]
+        ],
+        "rest": [
+            "Identifier",
+            "null"
+        ]
+    },
+    "AssignmentExpression": {
+        "left": [
+            "Pattern"
+        ],
+        "operator": [
+            "AssignmentOperator"
+        ],
+        "right": [
+            "Expression"
+        ]
+    },
+    "BinaryExpression": {
+        "left": [
+            "Expression"
+        ],
+        "operator": [
+            "BinaryOperator"
+        ],
+        "right": [
+            "Expression"
+        ]
+    },
+    "BlockStatement": {
+        "body": [
+            [
+                "Statement"
+            ]
+        ]
+    },
+    "BreakStatement": {
+        "label": [
+            "Identifier",
+            "null"
+        ]
+    },
+    "CallExpression": {
+        "arguments": [
+            [
+                "Expression"
+            ]
+        ],
+        "callee": [
+            "Expression"
+        ]
+    },
+    "CatchClause": {
+        "body": [
+            "BlockStatement"
+        ],
+        "guard": [
+            "Expression",
+            "null"
+        ],
+        "param": [
+            "Pattern"
+        ]
+    },
+    "ComprehensionBlock": {
+        "each": [
+            "boolean"
+        ],
+        "left": [
+            "Pattern"
+        ],
+        "right": [
+            "Expression"
+        ]
+    },
+    "ComprehensionExpression": {
+        "blocks": [
+            [
+                "ComprehensionBlock"
+            ]
+        ],
+        "body": [
+            "Expression"
+        ],
+        "filter": [
+            "Expression",
+            "null"
+        ]
+    },
+    "ConditionalExpression": {
+        "alternate": [
+            "Expression"
+        ],
+        "consequent": [
+            "Expression"
+        ],
+        "test": [
+            "Expression"
+        ]
+    },
+    "ContinueStatement": {
+        "label": [
+            "Identifier",
+            "null"
+        ]
+    },
+    "DebuggerStatement": {},
+    "Declaration": {},
+    "DoWhileStatement": {
+        "body": [
+            "Statement"
+        ],
+        "test": [
+            "Expression"
+        ]
+    },
+    "EmptyStatement": {},
+    "Expression": {},
+    "ExpressionStatement": {
+        "expression": [
+            "Expression"
+        ]
+    },
+    "ForInStatement": {
+        "body": [
+            "Statement"
+        ],
+        "each": [
+            "boolean"
+        ],
+        "left": [
+            "VariableDeclaration",
+            "Expression"
+        ],
+        "right": [
+            "Expression"
+        ]
+    },
+    "ForOfStatement": {
+        "body": [
+            "Statement"
+        ],
+        "left": [
+            "VariableDeclaration",
+            "Expression"
+        ],
+        "right": [
+            "Expression"
+        ]
+    },
+    "ForStatement": {
+        "body": [
+            "Statement"
+        ],
+        "init": [
+            "VariableDeclaration",
+            "Expression",
+            "null"
+        ],
+        "test": [
+            "Expression",
+            "null"
+        ],
+        "update": [
+            "Expression",
+            "null"
+        ]
+    },
+    "Function": {
+        "body": [
+            "BlockStatement",
+            "Expression"
+        ],
+        "defaults": [
+            [
+                "Expression"
+            ]
+        ],
+        "expression": [
+            "boolean"
+        ],
+        "generator": [
+            "boolean"
+        ],
+        "id": [
+            "Identifier",
+            "null"
+        ],
+        "params": [
+            [
+                "Pattern"
+            ]
+        ],
+        "rest": [
+            "Identifier",
+            "null"
+        ]
+    },
+    "FunctionDeclaration": {
+        "body": [
+            "BlockStatement",
+            "Expression"
+        ],
+        "defaults": [
+            [
+                "Expression"
+            ]
+        ],
+        "expression": [
+            "boolean"
+        ],
+        "generator": [
+            "boolean"
+        ],
+        "id": [
+            "Identifier"
+        ],
+        "params": [
+            [
+                "Pattern"
+            ]
+        ],
+        "rest": [
+            "Identifier",
+            "null"
+        ]
+    },
+    "FunctionExpression": {
+        "body": [
+            "BlockStatement",
+            "Expression"
+        ],
+        "defaults": [
+            [
+                "Expression"
+            ]
+        ],
+        "expression": [
+            "boolean"
+        ],
+        "generator": [
+            "boolean"
+        ],
+        "id": [
+            "Identifier",
+            "null"
+        ],
+        "params": [
+            [
+                "Pattern"
+            ]
+        ],
+        "rest": [
+            "Identifier",
+            "null"
+        ]
+    },
+    "GeneratorExpression": {
+        "blocks": [
+            [
+                "ComprehensionBlock"
+            ]
+        ],
+        "body": [
+            "Expression"
+        ],
+        "filter": [
+            "Expression",
+            "null"
+        ]
+    },
+    "GraphExpression": {
+        "expression": [
+            "Literal"
+        ],
+        "index": [
+            "uint32"
+        ]
+    },
+    "GraphIndexExpression": {
+        "index": [
+            "uint32"
+        ]
+    },
+    "Identifier": {
+        "name": [
+            "string"
+        ]
+    },
+    "IfStatement": {
+        "alternate": [
+            "Statement",
+            "null"
+        ],
+        "consequent": [
+            "Statement"
+        ],
+        "test": [
+            "Expression"
+        ]
+    },
+    "LabeledStatement": {
+        "body": [
+            "Statement"
+        ],
+        "label": [
+            "Identifier"
+        ]
+    },
+    "LetExpression": {
+        "body": [
+            "Expression"
+        ],
+        "head": [
+            [
+                "VariableDeclarator"
+            ]
+        ]
+    },
+    "LetStatement": {
+        "body": [
+            "Statement"
+        ],
+        "head": [
+            [
+                "VariableDeclarator"
+            ]
+        ]
+    },
+    "Literal": {
+        "value": [
+            "string",
+            "boolean",
+            "null",
+            "number",
+            "RegExp"
+        ]
+    },
+    "LogicalExpression": {
+        "left": [
+            "Expression"
+        ],
+        "operator": [
+            "LogicalOperator"
+        ],
+        "right": [
+            "Expression"
+        ]
+    },
+    "MemberExpression": {
+        "computed": [
+            "boolean"
+        ],
+        "object": [
+            "Expression"
+        ],
+        "property": [
+            "Identifier",
+            "Expression"
+        ]
+    },
+    "NewExpression": {
+        "arguments": [
+            [
+                "Expression"
+            ]
+        ],
+        "callee": [
+            "Expression"
+        ]
+    },
+    "Node": {
+        "loc": [
+            "SourceLocation",
+            "null"
+        ]
+    },
+    "ObjectExpression": {
+        "properties": [
+            [
+                "Property"
+            ]
+        ]
+    },
+    "Position": {
+        "column": [
+            "uint32"
+        ],
+        "line": [
+            "uint32"
+        ]
+    },
+    "Program": {
+        "body": [
+            [
+                "Statement"
+            ]
+        ]
+    },
+    "Property": {
+        "key": [
+            "Literal",
+            "Identifier"
+        ],
+        "kind": [
+            "init",
+            "get",
+            "set"
+        ],
+        "value": [
+            "Expression"
+        ]
+    },
+    "ReturnStatement": {
+        "argument": [
+            "Expression",
+            "null"
+        ]
+    },
+    "SequenceExpression": {
+        "expressions": [
+            [
+                "Expression"
+            ]
+        ]
+    },
+    "SourceLocation": {
+        "end": [
+            "Position"
+        ],
+        "source": [
+            "string",
+            "null"
+        ],
+        "start": [
+            "Position"
+        ]
+    },
+    "Statement": {},
+    "SwitchCase": {
+        "consequent": [
+            [
+                "Statement"
+            ]
+        ],
+        "test": [
+            "Expression",
+            "null"
+        ]
+    },
+    "SwitchStatement": {
+        "cases": [
+            [
+                "SwitchCase"
+            ]
+        ],
+        "discriminant": [
+            "Expression"
+        ],
+        "lexical": [
+            "boolean"
+        ]
+    },
+    "ThisExpression": {},
+    "ThrowStatement": {
+        "argument": [
+            "Expression"
+        ]
+    },
+    "TryStatement": {
+        "block": [
+            "BlockStatement"
+        ],
+        "finalizer": [
+            "BlockStatement",
+            "null"
+        ],
+        "guardedHandlers": [
+            [
+                "CatchClause"
+            ]
+        ],
+        "handler": [
+            "CatchClause",
+            "null"
+        ]
+    },
+    "UnaryExpression": {
+        "argument": [
+            "Expression"
+        ],
+        "operator": [
+            "UnaryOperator"
+        ],
+        "prefix": [
+            "boolean"
+        ]
+    },
+    "UpdateExpression": {
+        "argument": [
+            "Expression"
+        ],
+        "operator": [
+            "UpdateOperator"
+        ],
+        "prefix": [
+            "boolean"
+        ]
+    },
+    "VariableDeclaration": {
+        "declarations": [
+            [
+                "VariableDeclarator"
+            ]
+        ],
+        "kind": [
+            "var",
+            "let",
+            "const"
+        ]
+    },
+    "VariableDeclarator": {
+        "id": [
+            "Pattern"
+        ],
+        "init": [
+            "Expression",
+            "null"
+        ]
+    },
+    "WhileStatement": {
+        "body": [
+            "Statement"
+        ],
+        "test": [
+            "Expression"
+        ]
+    },
+    "WithStatement": {
+        "body": [
+            "Statement"
+        ],
+        "object": [
+            "Expression"
+        ]
+    },
+    "YieldExpression": {
+        "argument": [
+            "Expression",
+            "null"
+        ]
+    }
+}
