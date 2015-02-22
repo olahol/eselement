@@ -3,15 +3,15 @@ var eselement = require("../lib");
 var createElement = eselement.createElement;
 
 eselement.makeScript(function (program) {
-  var define = program.querySelector("[expression.callee.name='define']");
+  var define = program.querySelector("CallExpression[callee.name='define']");
 
   if (define) {
     var parent = define.parentElement;
 
-    var arr = define.expression.arguments[0]
-        , fn = define.expression.arguments[1];
+    var arr = define.arguments[0]
+        , fn = define.arguments[1];
 
-    define.isType("ExpressionStatement");
+    define.isType("CallExpression");
     arr.isType("ArrayExpression");
     fn.isType("FunctionExpression");
 
@@ -19,15 +19,15 @@ eselement.makeScript(function (program) {
       , names = fn.params.map(function (p) { return p.name; })
       , body = fn.body.body;
 
-    parent.removeChild(define);
+    define.remove();
 
     libs.forEach(function (lib, i) {
       var el = names[i] ? createElement("var " + names[i] + " = require('" + lib + "')")
                           : createElement("require('" + lib + "')");
-      parent.appendBody(el);
+      program.appendBody(el);
     });
 
-    parent.appendBody(body);
+    program.appendBody(body);
 
     return program;
   }

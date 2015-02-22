@@ -421,7 +421,8 @@
     "Program": {
         "body": [
             [
-                "Statement"
+                "Statement",
+                "null"
             ]
         ]
     },
