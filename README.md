@@ -18,10 +18,9 @@ $ npm install eselement --save
 ```javascript
 // amd2cjs.js
 // convert AMD modules to CommonJS.
-
 var fs = require("fs");
 
-var eselement = require("../lib");
+var eselement = require("eselement");
 
 var content = fs.readFileSync(process.argv[2])
   , program = eselement.createElement(content);
@@ -29,14 +28,8 @@ var content = fs.readFileSync(process.argv[2])
 var define = program.querySelector("CallExpression[callee.name='define']");
 
 if (define) {
-  var parent = define.parentElement;
-
   var arr = define.arguments[0]
       , fn = define.arguments[1];
-
-  define.isType("CallExpression");
-  arr.isType("ArrayExpression");
-  fn.isType("FunctionExpression");
 
   var libs = arr.elements.map(function (e) { return e.value })
     , names = fn.params.map(function (p) { return p.name; })
