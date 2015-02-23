@@ -3,11 +3,14 @@ var fs = require("fs")
 
 var eselement = require("../lib");
 
-var createElement = eselement.createElement
-  , createLiteral = eselement.createLiteral
-  , createIdentifier = eselement.createIdentifier
-  , runScript = eselement.runScript
-  , makeScript = eselement.makeScript;
+var createElement = eselement.createElement;
+
+var createLiteral = function (lit) {
+  return createElement({
+    type: "Literal"
+    , value: lit
+  });
+};
 
 var content = fs.readFileSync(__dirname + "/data/backbone.js")
   , program = createElement(content);
@@ -23,6 +26,20 @@ describe("Element.core", function () {
     });
   });
 
+  describe("#firstChild", function () {
+    it("should get the first child of program", function () {
+      var programChildren = program.childElements();
+      assert.equal(programChildren[0], program.firstChild());
+    });
+  });
+
+  describe("#lastChild", function () {
+    it("should get the last child of program", function () {
+      var programChildren = program.childElements();
+      assert.equal(programChildren[programChildren.length - 1], program.lastChild());
+    });
+  });
+
   describe("#querySelectorAll", function () {
     it("should select all elements of type VariableDecleration", function () {
       var decls = program.querySelectorAll("VariableDeclaration");
@@ -30,6 +47,13 @@ describe("Element.core", function () {
       decls.forEach(function (decl) {
         assert.equal(decl.type, "VariableDeclaration");
       });
+    });
+  });
+
+  describe("#querySelector", function () {
+    it("should select one element of type VariableDecleration", function () {
+      var decl = program.querySelector("VariableDeclaration");
+      assert.equal(decl.type, "VariableDeclaration");
     });
   });
 
@@ -86,9 +110,15 @@ describe("Element.core", function () {
       var statements = program.querySelectorAll("ReturnStatement");
       var empty = statements.filter(function (s) { return s.argument === null; });
       assert.ok(empty.length > 0);
-      var test = createLiteral("test_append3");
+      var test = createElement({
+        type: "ExpressionStatement"
+        , expression: {
+          type: "Literal"
+          , value: "test_append3"
+        }
+      });
       empty[0].appendChild("argument", test);
-      assert.equal(empty[0].argument, test);
+      assert.equal(empty[0].argument, test.expression);
     });
 
     it("should throw an error about appending", function () {

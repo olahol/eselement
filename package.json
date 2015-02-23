@@ -1,7 +1,7 @@
 {
   "name": "eselement"
   , "version": "0.0.1"
-  , "description": "Manipulate Javascript as easily as the DOM"
+  , "description": "DOM-like wrapper around the Javascript AST"
   , "main": "./lib/index.js"
   , "dependencies": {
     "esprima": "^2.0.0"

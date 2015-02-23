@@ -4,9 +4,8 @@
 [![Build Status](https://travis-ci.org/olahol/eselement.svg)](https://travis-ci.org/olahol/eselement)
 [![Coverage Status](https://img.shields.io/coveralls/olahol/eselement.svg?style=flat)](https://coveralls.io/r/olahol/eselement)
 [![Dependency Status](https://david-dm.org/olahol/eselement.svg)](https://david-dm.org/olahol/eselement)
-[![Download Count](https://img.shields.io/npm/dm/eselement.svg?style=flat)](https://www.npmjs.com/package/eselement)
 
-> Manipulate Javascript as easily as you do the DOM.
+> DOM-like wrapper around the Javascript AST
 
 ## Install
 
@@ -17,51 +16,55 @@ $ npm install eselement --save
 ## Example
 
 ```javascript
-// script.js
-// Convert CommonJS modules to AMD.
+// amd2cjs.js
+// convert AMD modules to CommonJS.
+
+var fs = require("fs");
+
 var eselement = require("../lib");
 
-var createElement = eselement.createElement
-  , createLiteral = eselement.createLiteral
-  , createIdentifier = eselement.createIdentifier;
+var content = fs.readFileSync(process.argv[2])
+  , program = eselement.createElement(content);
 
-eselement.makeScript(function (program) {
-  var reqs = program.querySelectorAll("VariableDeclarator! [callee.name='require']");
+var define = program.querySelector("CallExpression[callee.name='define']");
 
-  if (reqs.length === 0) {
-    return program;
-  }
+if (define) {
+  var parent = define.parentElement;
 
-  var libs = reqs.map(function (req) {
-    req.remove();
-    return [req.init.arguments[0].value, req.id.name];
+  var arr = define.arguments[0]
+      , fn = define.arguments[1];
+
+  define.isType("CallExpression");
+  arr.isType("ArrayExpression");
+  fn.isType("FunctionExpression");
+
+  var libs = arr.elements.map(function (e) { return e.value })
+    , names = fn.params.map(function (p) { return p.name; })
+    , body = fn.body.body;
+
+  define.parentElement.removeChild(define);
+
+  libs.forEach(function (lib, i) {
+    var el = names[i] ? eselement.createElement("var " + names[i] + " = require('" + lib + "')")
+                        : eselement.createElement("require('" + lib + "')");
+    program.appendChild("body", el);
   });
 
-  var newRoot = createElement("define([], function () { })")
-    , args = newRoot.querySelector("[callee.name='define']").arguments
-    , arr = args[0]
-    , fn = args[1];
+  program.appendChild("body", body);
 
-  libs.forEach(function (lib) {
-    arr.appendElements(createLiteral(lib[0]));
-    fn.appendParams(createIdentifier(lib[1]));
-  });
-
-  fn.appendBody(program.body);
-
-  return newRoot;
-});
+  console.log(program.outerCode());
+}
 ```
 
 ```bash
-$ cat common_js_file.js
-var crypto = require("crypto");
+$ cat amd_module.js
+define(["crypto"], function (crypto) {
+  var ciphers = crypto.getCiphers();
+  console.log(ciphers);
+});
+
+$ node amd2cjs.js amd_module.js
+var crypto = require('crypto');
 var ciphers = crypto.getCiphers();
 console.log(ciphers);
-
-$ node script.js common_js_file.js
-define(['crypto'], function (crypto) {
-    var ciphers = crypto.getCiphers();
-    console.log(ciphers);
-});
 ```
