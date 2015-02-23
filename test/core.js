@@ -57,28 +57,6 @@ describe("Element.core", function () {
     });
   });
 
-  describe("#isType", function () {
-    it("should throw errors", function () {
-      var decl = program.querySelector("VariableDeclaration");
-
-      assert.throws(function () {
-        decl.isType();
-      }, Error);
-
-      assert.throws(function () {
-        decl.isType("FunctionExpression");
-      }, /FunctionExpression/);
-
-      assert.throws(function () {
-        decl.isType("FunctionExpression", "ArrayExpression");
-      }, /ArrayExpression/);
-
-      assert.doesNotThrow(function () {
-        decl.isType("VariableDeclaration");
-      });
-    });
-  });
-
   describe("#appendChild", function () {
     it("should append a literal to the end of program", function () {
       var test = createLiteral("test_append1");
@@ -187,19 +165,19 @@ describe("Element.core", function () {
       assign.removeChild(assign.right);
     });
 
-    it("should throw an error", function () {
+    it("should throw an error about parent", function () {
       var test = createLiteral("test");
       assert.throws(function () {
         program.removeChild(test);
-      }, Error);
+      }, /parent/);
     });
 
-    it("should throw an error", function () {
+    it("should throw an error about not found", function () {
       var test = createLiteral("test");
       test.parentElement = program;
       assert.throws(function () {
         program.removeChild(test);
-      }, Error);
+      }, /not found/);
     });
   });
 

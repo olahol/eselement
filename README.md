@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/olahol/eselement.svg)](https://travis-ci.org/olahol/eselement)
 [![Coverage Status](https://img.shields.io/coveralls/olahol/eselement.svg?style=flat)](https://coveralls.io/r/olahol/eselement)
 [![Dependency Status](https://david-dm.org/olahol/eselement.svg)](https://david-dm.org/olahol/eselement)
+[![License](http://img.shields.io/badge/license-MIT-brightgreen.svg)]()
 
 > DOM-like wrapper around the Javascript AST
 
@@ -61,3 +62,66 @@ var crypto = require('crypto');
 var ciphers = crypto.getCiphers();
 console.log(ciphers);
 ```
+
+## API
+
+### createElement(string || object)
+
+Creates and element from either Javascript code or Mozilla Parser AST.
+
+## Element
+
+### Attributes
+
+All attributes from the AST are copied onto the Element, for example
+an element of type `Program` will have an attribute `body`.
+
+#### Element.parentElement
+
+A reference to the Elements parent, if it has no parent it's `null`.
+
+#### Element.parentAttribute
+
+A string denoting the attribute on the parent in which this element is in.
+
+### Methods
+
+#### Element.childElements()
+
+Get all children of an element.
+
+#### Element.firstChild()
+
+Get the first child of an element.
+
+#### Element.lastChild()
+
+Get the last child of an element.
+
+#### Element.querySelectorAll(selector)
+
+Select elements using esquery.
+
+#### Element.querySelector(selector)
+
+Select the first matching element using esquery.
+
+#### Element.appendChild(attribute, child)
+
+Append `child` to element attribute `attribute`.
+
+#### Element.removeChild(child)
+
+Remove `child` from element.
+
+#### Element.replaceChild(newChild, oldChild)
+
+Replace `oldChild` with `newChild` in element.
+
+#### Element.outerAST()
+
+Return the AST for element.
+
+#### Element.outerCode()
+
+Return the javascript code for element.
