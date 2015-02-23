@@ -1,6 +1,6 @@
 {
   "name": "eselement"
-  , "version": "0.0.1"
+  , "version": "0.1.0"
   , "description": "DOM-like wrapper around the Javascript AST"
   , "main": "./lib/index.js"
   , "dependencies": {
@@ -23,6 +23,10 @@
     , "url": "https://github.com/olahol/eselement"
   }
   , "keywords": [
+    "ast"
+    , "estools"
+    , "esprima"
+    , "ecmascript"
   ]
   , "author": "Ola Holmström"
   , "contributors": [
