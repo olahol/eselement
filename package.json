@@ -1,18 +1,16 @@
 {
   "name": "eselement"
-  , "version": "0.1.0"
+  , "version": "0.1.1"
   , "description": "DOM-like wrapper around the Javascript AST"
   , "main": "./lib/index.js"
   , "dependencies": {
-    "esprima": "^2.0.0"
+    "recast": "^0.10.0"
     , "esquery": "^0.3.0"
-    , "escodegen": "^1.6.1"
   }
   , "devDependencies": {
     "coveralls": "^2.11.2"
     , "mocha": "^2.1.0"
     , "istanbul": "^0.3.5"
-    , "pegjs": "^0.8.0"
   }
   , "scripts": {
     "test": "mocha"
@@ -26,7 +24,9 @@
     "ast"
     , "estools"
     , "esprima"
+    , "recast"
     , "ecmascript"
+    , "refactor"
   ]
   , "author": "Ola Holmström"
   , "contributors": [
