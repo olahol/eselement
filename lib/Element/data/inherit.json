@@ -2,23 +2,32 @@
     "ArrayExpression": [
         "Node",
         "Expression",
-        "ArrayExpression"
+        "ArrayExpression",
+        "Pattern"
+    ],
+    "ArrayPattern": [
+        "Node",
+        "Pattern",
+        "ArrayPattern"
     ],
     "ArrowExpression": [
         "Node",
         "Function",
         "Expression",
-        "ArrowExpression"
+        "ArrowExpression",
+        "Pattern"
     ],
     "AssignmentExpression": [
         "Node",
         "Expression",
-        "AssignmentExpression"
+        "AssignmentExpression",
+        "Pattern"
     ],
     "BinaryExpression": [
         "Node",
         "Expression",
-        "BinaryExpression"
+        "BinaryExpression",
+        "Pattern"
     ],
     "BlockStatement": [
         "Node",
@@ -33,7 +42,8 @@
     "CallExpression": [
         "Node",
         "Expression",
-        "CallExpression"
+        "CallExpression",
+        "Pattern"
     ],
     "CatchClause": [
         "Node",
@@ -46,12 +56,14 @@
     "ComprehensionExpression": [
         "Node",
         "Expression",
-        "ComprehensionExpression"
+        "ComprehensionExpression",
+        "Pattern"
     ],
     "ConditionalExpression": [
         "Node",
         "Expression",
-        "ConditionalExpression"
+        "ConditionalExpression",
+        "Pattern"
     ],
     "ContinueStatement": [
         "Node",
@@ -80,7 +92,8 @@
     ],
     "Expression": [
         "Node",
-        "Expression"
+        "Expression",
+        "Pattern"
     ],
     "ExpressionStatement": [
         "Node",
@@ -117,22 +130,26 @@
         "Node",
         "Function",
         "Expression",
-        "FunctionExpression"
+        "FunctionExpression",
+        "Pattern"
     ],
     "GeneratorExpression": [
         "Node",
         "Expression",
-        "GeneratorExpression"
+        "GeneratorExpression",
+        "Pattern"
     ],
     "GraphExpression": [
         "Node",
         "Expression",
-        "GraphExpression"
+        "GraphExpression",
+        "Pattern"
     ],
     "GraphIndexExpression": [
         "Node",
         "Expression",
-        "GraphIndexExpression"
+        "GraphIndexExpression",
+        "Pattern"
     ],
     "Identifier": [
         "Node",
@@ -153,7 +170,8 @@
     "LetExpression": [
         "Node",
         "Expression",
-        "LetExpression"
+        "LetExpression",
+        "Pattern"
     ],
     "LetStatement": [
         "Node",
@@ -163,22 +181,26 @@
     "Literal": [
         "Node",
         "Expression",
+        "Pattern",
         "Literal"
     ],
     "LogicalExpression": [
         "Node",
         "Expression",
-        "LogicalExpression"
+        "LogicalExpression",
+        "Pattern"
     ],
     "MemberExpression": [
         "Node",
         "Expression",
-        "MemberExpression"
+        "MemberExpression",
+        "Pattern"
     ],
     "NewExpression": [
         "Node",
         "Expression",
-        "NewExpression"
+        "NewExpression",
+        "Pattern"
     ],
     "Node": [
         "Node"
@@ -186,7 +208,17 @@
     "ObjectExpression": [
         "Node",
         "Expression",
-        "ObjectExpression"
+        "ObjectExpression",
+        "Pattern"
+    ],
+    "ObjectPattern": [
+        "Node",
+        "Pattern",
+        "ObjectPattern"
+    ],
+    "Pattern": [
+        "Node",
+        "Pattern"
     ],
     "Position": [
         "Position"
@@ -207,7 +239,8 @@
     "SequenceExpression": [
         "Node",
         "Expression",
-        "SequenceExpression"
+        "SequenceExpression",
+        "Pattern"
     ],
     "SourceLocation": [
         "SourceLocation"
@@ -228,7 +261,8 @@
     "ThisExpression": [
         "Node",
         "Expression",
-        "ThisExpression"
+        "ThisExpression",
+        "Pattern"
     ],
     "ThrowStatement": [
         "Node",
@@ -243,12 +277,14 @@
     "UnaryExpression": [
         "Node",
         "Expression",
-        "UnaryExpression"
+        "UnaryExpression",
+        "Pattern"
     ],
     "UpdateExpression": [
         "Node",
         "Expression",
-        "UpdateExpression"
+        "UpdateExpression",
+        "Pattern"
     ],
     "VariableDeclaration": [
         "Node",
@@ -273,6 +309,7 @@
     "YieldExpression": [
         "Node",
         "Expression",
-        "YieldExpression"
+        "YieldExpression",
+        "Pattern"
     ]
 }

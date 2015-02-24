@@ -7,6 +7,14 @@
             ]
         ]
     },
+    "ArrayPattern": {
+        "elements": [
+            [
+                "Pattern",
+                "null"
+            ]
+        ]
+    },
     "ArrowExpression": {
         "body": [
             "BlockStatement",
@@ -410,6 +418,14 @@
             ]
         ]
     },
+    "ObjectPattern": {
+        "properties": [
+            [
+                null
+            ]
+        ]
+    },
+    "Pattern": {},
     "Position": {
         "column": [
             "uint32"
