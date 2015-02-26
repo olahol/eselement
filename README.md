@@ -118,6 +118,10 @@ Remove `child` from element.
 
 Replace `oldChild` with `newChild` in element.
 
+#### Element.cloneElement()
+
+Return a clone of element.
+
 #### Element.outerAST()
 
 Return the AST for element.

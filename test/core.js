@@ -240,6 +240,14 @@ describe("Element.core", function () {
     });
   });
 
+  describe("#cloneElement", function () {
+    it("should return a clone of program", function () {
+      var clone = program.cloneElement();
+      assert.equal(clone.type, "Program");
+      assert.equal(clone.parentElement, null);
+    });
+  });
+
   describe("#outerAST", function () {
     it("should return a valid AST", function () {
       var ast = program.outerAST();
