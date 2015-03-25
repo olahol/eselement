@@ -12,6 +12,13 @@ var createLiteral = function (lit) {
   });
 };
 
+var createIdentifier = function (name) {
+  return createElement({
+    type: "Identifier"
+    , name: name
+  });
+};
+
 var content = fs.readFileSync(__dirname + "/data/backbone.js")
   , program = createElement(content);
 
@@ -54,6 +61,54 @@ describe("Element.core", function () {
     it("should select one element of type VariableDecleration", function () {
       var decl = program.querySelector("VariableDeclaration");
       assert.equal(decl.type, "VariableDeclaration");
+    });
+  });
+
+  describe("#setAttribute", function () {
+    it("should change the kind of a variable declaration", function () {
+      var decl = program.querySelector("VariableDeclaration");
+      assert.equal(decl.type, "VariableDeclaration");
+      assert.equal(decl.kind, "var");
+      decl.setAttribute("kind", "let");
+      assert.equal(decl.kind, "let");
+    });
+
+    it("should change the test of an if statement", function () {
+      var decl = program.querySelector("IfStatement");
+      assert.equal(decl.type, "IfStatement");
+      var test = createLiteral(0);
+      decl.setAttribute("test", test);
+    });
+
+    it("should change the test of an if statement", function () {
+      var decl = program.querySelector("IfStatement");
+      assert.equal(decl.type, "IfStatement");
+      var test = createElement("console.log('foo bar');");
+      decl.setAttribute("test", test);
+    });
+
+    it("should throw an error when changing test of an if statement", function () {
+      var decl = program.querySelector("IfStatement");
+      assert.equal(decl.type, "IfStatement");
+      var test = createElement("");
+
+      assert.throws(function () {
+        decl.setAttribute("test", test);
+      }, /valid/);
+    });
+
+    it("should throw an error when changing the kind of a variable declaration", function () {
+      var decl = program.querySelector("VariableDeclaration");
+      assert.equal(decl.type, "VariableDeclaration");
+      assert.throws(function () {
+        decl.setAttribute("kind", "test");
+      }, /attribute/);
+    });
+
+    it("should throw an error about valid not valid attribute", function () {
+      assert.throws(function () {
+        program.setAttribute("kind", "let");
+      }, /attribute/);
     });
   });
 
@@ -245,6 +300,7 @@ describe("Element.core", function () {
       var clone = program.cloneElement();
       assert.equal(clone.type, "Program");
       assert.equal(clone.parentElement, null);
+      assert.notEqual(clone, program);
     });
   });
 

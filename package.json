@@ -1,6 +1,6 @@
 {
   "name": "eselement"
-  , "version": "0.1.1"
+  , "version": "0.1.3"
   , "description": "DOM-like wrapper around the Javascript AST"
   , "main": "./lib/index.js"
   , "dependencies": {
@@ -14,7 +14,7 @@
   }
   , "scripts": {
     "test": "mocha"
-    , "cover": "./node_modules/istanbul/lib/cli.js cover --print detail ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec"
+    , "cover": "./node_modules/istanbul/lib/cli.js cover --print detail ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 0"
   }
   , "repository": {
     "type": "git"

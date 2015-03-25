@@ -106,6 +106,11 @@ Select elements using esquery.
 
 Select the first matching element using esquery.
 
+#### Element.setAttribute(attribute, value)
+
+Sets the attribute `attribute` to `value`. Does checking to see if
+`value` is of the correct type for `attribute`.
+
 #### Element.appendChild(attribute, child)
 
 Append `child` to element attribute `attribute`.

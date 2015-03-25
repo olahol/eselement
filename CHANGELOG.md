@@ -1,3 +1,7 @@
+### 0.1.3 (2015-03-26)
+
+* Added `setAttribute` to Element.
+
 ### 0.1.2 (2015-02-26)
 
 * Added `cloneElement` to Element.
