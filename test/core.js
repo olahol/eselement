@@ -133,7 +133,7 @@ describe("Element.core", function () {
     });
 
     it("should change an if statements consequent to a console.log", function () {
-      var statement = program.querySelector("IfStatement! > ExpressionStatement");
+      var statement = program.querySelector("!IfStatement > ExpressionStatement");
       var test = createElement("console.log('foo bar');");
       statement.appendChild("consequent", test);
       assert.ok(statement.consequent.lastChild().expression.arguments[0].value === "foo bar");
@@ -155,7 +155,7 @@ describe("Element.core", function () {
     });
 
     it("should throw an error about appending", function () {
-      var statement = program.querySelector("ReturnStatement! > ThisExpression");
+      var statement = program.querySelector("!ReturnStatement > ThisExpression");
       var test = createLiteral("test_append4");
       assert.throws(function () {
         statement.appendChild("argument", test);

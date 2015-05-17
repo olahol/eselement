@@ -19,7 +19,7 @@ var createIdentifier = function (name) {
 var content = fs.readFileSync(process.argv[2])
   , program = eselement.createElement(content);
 
-var reqs = program.querySelectorAll("VariableDeclarator! [callee.name='require']");
+var reqs = program.querySelectorAll("!VariableDeclarator [callee.name='require']");
 
 if (reqs.length > 0) {
   var libs = reqs.map(function (req) {
