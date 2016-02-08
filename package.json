@@ -1,39 +1,39 @@
 {
-  "name": "eselement"
-  , "version": "0.2.0"
-  , "description": "DOM-like wrapper around the Javascript AST"
-  , "main": "./lib/index.js"
-  , "dependencies": {
-    "recast": "^0.10.0"
-    , "esquery": "^0.4.0"
-  }
-  , "devDependencies": {
-    "coveralls": "^2.11.2"
-    , "mocha": "^2.1.0"
-    , "istanbul": "^0.3.5"
-  }
-  , "scripts": {
-    "test": "mocha"
-    , "cover": "./node_modules/istanbul/lib/cli.js cover --print detail ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 0"
-  }
-  , "repository": {
-    "type": "git"
-    , "url": "https://github.com/olahol/eselement"
-  }
-  , "keywords": [
-    "ast"
-    , "estools"
-    , "esprima"
-    , "recast"
-    , "ecmascript"
-    , "refactor"
-  ]
-  , "author": "Ola Holmström"
-  , "contributors": [
-  ]
-  , "license": "MIT"
-  , "bugs": {
+  "name": "eselement",
+  "version": "0.2.1",
+  "description": "DOM-like wrapper around the Javascript AST",
+  "main": "./lib/index.js",
+  "dependencies": {
+    "esprima-fb": "^15001.1001.0-dev-harmony-fb",
+    "esquery": "^0.4.0",
+    "recast": "^0.11.0"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.2",
+    "mocha": "^2.1.0",
+    "istanbul": "^0.3.5"
+  },
+  "scripts": {
+    "test": "mocha",
+    "cover": "./node_modules/istanbul/lib/cli.js cover --print detail ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olahol/eselement"
+  },
+  "keywords": [
+    "ast",
+    "estools",
+    "esprima",
+    "recast",
+    "ecmascript",
+    "refactor"
+  ],
+  "author": "Ola Holmström",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
     "url": "https://github.com/olahol/eselement/issues"
-  }
-  , "homepage": "https://github.com/olahol/eselement"
+  },
+  "homepage": "https://github.com/olahol/eselement"
 }
